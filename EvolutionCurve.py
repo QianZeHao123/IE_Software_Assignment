@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
-from math import sin, cos
+from math import sin, cos, pi
 import numpy as np
 import matplotlib.pyplot as plt
 from best_fit import best_fit
@@ -11,7 +11,8 @@ best_step, best_v, best_f = steps[-1], variants[-1][0], fits[-1]
 fig = plt.figure()
 
 ax = fig.add_subplot(211)
-def f(x): return x + 10*sin(5*x) + 7*cos(4*x)
+# def f(x): return x + 10*sin(5*x) + 7*cos(4*x)
+def f(x): return x * sin(3*pi*x)
 
 
 x = np.linspace(0, 10, 1000)
@@ -28,7 +29,7 @@ ax.set_ylabel('Fitness')
 
 # Plot the maximum.
 ax.scatter([best_step], [best_f], facecolor='r')
-ax.annotate(s='x: {:.2f}\ny:{:.2f}'.format(best_v, best_f),
-            xy=(best_step, best_f),
-            xytext=(best_step-0.3, best_f-0.3))
+# ax.annotate(s='x: {:.2f}\ny:{:.2f}'.format(best_v, best_f),
+#             xy=(best_step, best_f),
+#             xytext=(best_step-0.3, best_f-0.3))
 plt.show()
