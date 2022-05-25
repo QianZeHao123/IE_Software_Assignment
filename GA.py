@@ -5,7 +5,7 @@
 Find the global maximum for function: f(x) = x + 10sin(5x) + 7cos(4x)
 '''
 
-from math import sin, cos
+from math import sin, cos, pi
 
 from gaft import GAEngine
 from gaft.components import BinaryIndividual
@@ -21,7 +21,7 @@ from gaft.plugin_interfaces.analysis import OnTheFlyAnalysis
 from gaft.analysis.fitness_store import FitnessStore
 
 # Define population.
-indv_template = BinaryIndividual(ranges=[(0, 10)], eps=0.001)
+indv_template = BinaryIndividual(ranges=[(-1, 2)], eps=0.001)
 population = Population(indv_template=indv_template, size=30).init()
 
 # Create genetic operators.
@@ -40,7 +40,8 @@ engine = GAEngine(population=population, selection=selection,
 @engine.fitness_register
 def fitness(indv):
     x, = indv.solution
-    return x + 10*sin(5*x) + 7*cos(4*x)
+    # return x + 10*sin(5*x) + 7*cos(4*x)
+    return x * sin(3*pi*x)
 
 # Define on-the-fly analysis.
 
