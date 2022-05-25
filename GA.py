@@ -66,4 +66,4 @@ class ConsoleOutputAnalysis(OnTheFlyAnalysis):
 
 if '__main__' == __name__:
     # Run the GA engine.
-    engine.run(ng=100)
+    engine.run(ng=1000)
