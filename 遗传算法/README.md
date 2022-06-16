@@ -1,5 +1,6 @@
 # IE_Software_Assignment
-工业工程软件与应用作业
+Python遗传算法
+* 使用gaft遗传算法框架
 ## 创建虚拟环境
 ```
 $ python3 -m venv venv
