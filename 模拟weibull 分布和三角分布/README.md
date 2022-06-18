@@ -3,6 +3,7 @@
 * 在IE_Software_Assigment根目录中执行
 ```bash
 # 依赖包为package.json中的dependencies和package-lock.json中的dependencies
+# npm可以自动识别根目录下的package.json文件，并且自动安装依赖包
 npm install
 ```
 ## 2 JavaScript版本的模拟weibull分布和三角分布
