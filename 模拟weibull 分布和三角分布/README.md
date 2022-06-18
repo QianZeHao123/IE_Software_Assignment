@@ -1,6 +1,6 @@
 # 模拟weibull 分布和三角分布
 ## 1 安装依赖
-* 在IE_Software_Assigment根目录中执行
+* 在triangle-distribution.js所在目录中执行
 ```bash
 # 依赖包为package.json中的dependencies和package-lock.json中的dependencies
 # npm可以自动识别根目录下的package.json文件，并且自动安装依赖包
